@@ -1,0 +1,56 @@
+{% extends 'main.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../static/style.css' %}">
+
+    {% block title %}
+    <title>Текст статьи</title>
+    {% endblock %}
+</head>
+
+<body>
+    {% block content %}
+    <div class="container">
+        <div class="container_content">
+            <div class="single_article_title">
+                <span>{{ blog.title }}</span>
+            </div>
+            <div class="single_article_img"></div>
+            <div class="single_article_title_2"><span>Подзаголовок</span></div>
+            <div class="single_article_text_1">
+                <span>
+                    Лид. Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является
+                    стандартной
+                    "рыбой" для текстов на латинице с начала XVI века.
+                </span>
+            </div>
+            <div class="single_article_text_2">
+                <span>{{ blog.text }}</span>
+            </div>
+            <div class="border"></div>
+            <div class="description">
+                <img src="{{ blog.img.url }}" alt="картинка">
+            </div>
+            <div class="border"></div>
+            <div class="single_article_text_2">
+                <span>{{ blog.text }}</span>
+            </div>
+            <div class="quote_wrap">
+                <div class="arrow_left">«</div>
+                <div class="quote">
+                    <span>Цитата. Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</span>
+                </div>
+                <div class="arrow_right">»</div>
+            </div>
+            <div class="border"></div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+
+</html>

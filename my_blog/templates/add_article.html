@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../static/style.css' %}">
+    
+    {% block title %}
+    <title>Добавить статью</title>
+    {% endblock %}
+</head>
+<body>
+    {% block content %}
+    <div class="add_article"><span>Добавить статью</span></div>
+    <form method="post" enctype="multipart/form-data">
+        <div class="add_form_1">
+            {% csrf_token %}
+            <div class="add_title_form">{{ form.title }}</div>
+            <div class="form_button">
+                <a href="{% url 'main' %}">
+                    <button type="submit">Опубликовать</button>
+                </a>
+            </div>
+        </div>
+        <div class="add_form_2">
+            <div class="add_text_form">{{ form.text }}</div>
+            <div class="add_img_form">
+                <div class="upload"><span>Загрузить изображение</span></div>
+                <label>
+                    {{form.img}}
+                    <div class="add_img_button"><span>Файл</span></div>
+                </label>
+                {% if img %}
+                    {{img}}
+                {% endif %}
+            </div>
+        </div>
+    </form>
+    {% endblock %}
+</body>
+</html>

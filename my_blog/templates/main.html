@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '../static/style.css' %}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    {% block title %}
+    <title>Домашняя страница</title>
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+    <div class="container_header">
+        <div class="header_top">
+            <div class="blog">
+                <a href="{% url 'main' %}"><div class="logo">kodland</div></a>
+                <div class="logo_text">Блог</div>
+            </div>
+            <div class="add_button">
+                <div class="add_button_inner">
+                    <a href="{% url 'add_article' %}">+ Добавить статью</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    {% block content %}
+    <div class="content_1">
+        <div class="block_left">
+            <div class="new">NEW</div>
+            <div class="block_left_inner">
+                <span>{{obj.title}}</span>
+            </div>
+            <div class="block_left_inner_text">
+                <span>{{ obj.text }}</span>
+            </div>
+            <div class="read_button">
+                <a href="{{ obj.get_absolute_url }}">Читать</a>
+            </div>
+        </div>
+        <div class="block_right">
+            <img src="../static/images/1Statya_3.png" alt="">
+        </div>
+    </div>
+    <div class="other">
+        <span>Другие статьи</span>
+    </div>
+    <div class="content_2">
+        {% for item in paginator.items.object_list %}
+        <div class="article_item">
+            <div class="article_date">
+                {{ item.date }}
+            </div>
+            <div class="article_img">
+                <img src="../static/images/1Statya_2.png" alt="">
+            </div>
+            <a href="{{ item.get_absolute_url }}">
+                <div class="article_text">
+                    {{ item.title }}
+                </div>
+            </a>
+        </div>
+        {% endfor %}    
+    </div>
+    {% endblock %}
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

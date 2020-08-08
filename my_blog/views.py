@@ -32,7 +32,7 @@ class ArticleListView(ListView):
         queryset = Blog.objects.all()
         paginator = paginate(self.request, queryset, 10)
         context['paginator'] = paginator
-        for i on queryset:
+        for i in queryset:
             context['obj'] = i
         return context
 

@@ -1,0 +1,442 @@
+@font-face {
+  font-family: 'CirceRounded-AltBold';
+  src: url(../static/css/fonts/CirceRounded-AltBold.otf);
+}
+@font-face {
+  font-family: 'museosanscyrl-700';
+  src: url(../static/css/fonts/museosanscyrl-700.ttf);
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url(../static/css/fonts/Roboto-Bold.ttf);
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header_top {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    margin-top: 71px;
+    border-top: 2px solid gainsboro;
+    border-bottom: 2px solid gainsboro;
+    justify-content: space-between;
+}
+
+.blog {
+    font-family: 'CirceRounded-AltBold';
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+}
+
+.blog a {
+    text-decoration: none;
+}
+
+.blog a:hover {
+    text-decoration: underline;
+    color: #315AF2
+}
+
+.logo {
+    color: #315AF2;
+    margin-right: 15px;
+    font-size: 35px;
+}
+
+.logo_text {
+    font-size: 22px;
+    margin-top: 8px;
+}
+
+.add_button {
+    display: flex;
+    padding: 6px 16px;
+    width: 169px;
+    height: 32px;
+    margin-top: 19px;
+    margin-right: 120px;
+    background: #315AF2;
+    border-radius: 6px;
+}
+
+.add_button a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.add_button_inner {
+    display: flex;
+    font-family: 'CirceRounded-AltBold';
+    font-size: 16px;
+}
+
+.add_button_inner a {
+    color: white;
+}
+
+.add_button_inner a:hover {
+    text-decoration: underline;
+}
+
+.content_1 {
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+}
+
+.block_left {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 120px;
+    width: 672px;
+    height: 338px;
+}
+
+.new {
+    font-family: 'CirceRounded-AltBold';
+    color: rgb(245, 55, 118);
+    font-size: 15px;
+    margin-left: 2px;
+}
+
+.block_left_inner {
+    height: 112px;
+    font-size: 44px;
+    line-height: 128%;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+    font-family: 'museosanscyrl-700';
+}
+
+.block_left_inner_text {
+    font-family: 'CirceRounded-AltBold';
+    line-height: 136%;
+    letter-spacing: -0.416667px;
+    font-size: 16px;
+    color: #000000;
+    width: 391px;
+    margin-top: 15px;
+}
+
+.block_right {
+    width: 464px;
+    height: 422px;
+}
+
+.read_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 150px;
+    height: 58px;
+    margin-top: 20px;
+    background: #315AF2;
+    border-radius: 6px;
+    font-family: 'museosanscyrl-700';
+    font-size: 32px;
+}
+
+.read_button a {
+    text-decoration: none;
+    color: white;
+}
+.read_button a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.read_button a:hover {
+    text-decoration: underline;
+}
+
+.other {
+    width: 231px;
+    height: 38px;
+    margin-left: 120px;
+    margin-top: 30px;
+    font-family: 'museosanscyrl-700';
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+}
+
+.content_2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 120px;
+}
+
+.article_item {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    border: 2px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin-right: 120px;
+    margin-bottom: 32px;
+}
+
+.article_date {
+    font-family: 'CirceRounded-AltBold';
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px 0 0 15px;
+    letter-spacing: -0.416667px;
+    color: #979797;  
+}
+
+.article_img {
+    place-self: center;
+}
+
+.article_text {
+    margin-top: 20px;
+    font-family: 'CirceRounded-AltBold';
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+}
+
+.article_item a {
+    text-decoration: none;
+}
+
+.article_item a:hover {
+    text-decoration: underline;
+    color: #315AF2;
+}
+
+.container {
+    background: #E5E5E5;
+}
+
+.container_content {
+    display: flex;
+    flex-direction: column;
+    width: 624px;
+    margin: auto;
+    background: #E5E5E5;
+}
+
+.single_article_title {
+    width: 400px;
+    height: 123px;
+    margin-top: 60px;
+    font-family: 'museosanscyrl-700';
+    font-size: 32px;
+    line-height: 128%;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+}
+
+.single_article_img {
+    width: 624px;
+    height: 400px;
+    background: url('../static/images/1Statya_3.png') no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+}
+
+.single_article_title_2 {
+    font-family: 'CirceRounded-AltBold';
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 25px;
+}
+
+.single_article_text_1 {
+    width: 520px;
+    height: 112px;
+    margin-top: 25px;
+    font-family: 'CirceRounded-AltBold';
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.416667px;
+    color: #404040;
+}
+
+.single_article_text_2 {
+    margin-top: 25px;
+    font-family: 'CirceRounded-AltBold';
+    font-size: 17px;
+    line-height: 128%;
+    color: #404040;
+}
+
+.description {
+    font-family: 'CirceRounded-AltBold';
+    font-size: 17px;
+    line-height: 128%;
+    color: #404040;
+}
+
+.border {
+    margin: 45px 0 45px 0;
+    border: #404040 solid 1px;
+    width: 180px;
+    place-self: center;
+}
+
+.quote_wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 84px;
+    margin: 35px 0 35px 0;
+}
+
+.quote {
+    width: 408px;
+    font-family: 'CirceRounded-AltBold';
+    font-size: 24px;
+    line-height: 28px;
+    align-items: center;
+    letter-spacing: -0.416667px;
+    color: #404040;
+}
+
+.arrow_right {
+    width: 25px;
+    height: 72px;
+    align-self: flex-end;
+    font-family: 'Roboto-Bold';
+    font-size: 48px;
+    line-height: 245%;
+
+}
+.arrow_left {
+    width: 25px;
+    height: 72px;
+    font-family: 'Roboto-Bold';
+    font-size: 48px;
+    line-height: 27%;
+}
+
+.add_article {
+    width: 435px;
+    height: 52px;
+    margin: 60px 0 0 120px;
+    font-family: 'museosanscyrl-700';
+    font-size: 45px;
+    line-height: 52px;
+    letter-spacing: -0.416667px;
+    color: #315AF2;
+}
+
+.add_form_1 {
+    display: flex;
+    margin: 20px 120px 0 120px;
+}
+
+.add_title_form {
+    margin-right: 20px;
+}
+
+.add_title_form input {
+    width: 881px;
+    border: 2px solid  #E5E5E5;
+    border-radius: 3px;
+    height: 48px;
+    padding: 10px;
+}
+
+.add_title_form input::placeholder {
+    font-family: 'CirceRounded-AltBold';
+    font-size: 24px;
+    letter-spacing: -0.416667px;
+    color: #C4C4C4;
+}
+
+.form_button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 159px;
+    height: 47px;
+    font-family: 'museosanscyrl-700';
+    background: #E9399C;
+    border-radius: 3px;
+    border: none;
+    color: white;
+}
+
+.form_button a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.add_form_2 {
+    display: flex;
+    margin: 0 120px 50px 120px;
+}
+
+.add_text_form {
+    margin: 30px 20px 0 0;
+}
+
+.add_text_form textarea {
+    width: 881px;
+    border: 2px solid  #E5E5E5;
+    border-radius: 3px;
+    height: 48px;
+    padding: 10px;
+}
+
+.add_img_form {
+    width: 240px;
+    height: 168px;
+    margin: 30px 0 0 0;
+    border: 2px solid  #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.upload {
+    font-family: 'CirceRounded-AltBold';
+    color: #315AF2;
+    font-size: 24px;
+    line-height: 31px;
+    margin: 15px 0 15px 0;
+}
+
+.add_img_form input[type='file'] {
+    display: none;
+}
+
+.add_img_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    height: 50px;
+    background: #315AF2;
+    border-radius: 3px;
+    color: white;
+}
+
+.add_img_button span:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.add_img_button span {
+    font-family: 'CirceRounded-AltBold';
+    font-size: 18px;
+    line-height: 22px;
+}
+

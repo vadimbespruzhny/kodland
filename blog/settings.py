@@ -25,7 +25,7 @@ SECRET_KEY = '-$5s58%xh2(3ad97lc)5&r*u1&)2iym!3qsbdao7og^rgsttox'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['radiant-earth-32704.herokuapp.com']
+ALLOWED_HOSTS = ['radiant-earth-32704.herokuapp.com', '127.0.0.1']
 
 
 # Application definition

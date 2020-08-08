@@ -28,8 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['radiant-earth-32704.herokuapp.com', '127.0.0.1']
 
-DATABASES['default'] = dj_database_url.config(
-    conn_max_age=600, ssl_require=True)
 # Application definition
 
 INSTALLED_APPS = [
@@ -90,6 +88,8 @@ DATABASES = {
     }
 }
 
+DATABASES['default'] = dj_database_url.config(
+    conn_max_age=600, ssl_require=True)
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 

@@ -30,10 +30,10 @@ class ArticleListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         queryset = Blog.objects.all()
+        obj = Blog.objects.all()[0]
         paginator = paginate(self.request, queryset, 10)
         context['paginator'] = paginator
-        for i in queryset:
-            context['obj'] = i
+        context['obj'] = obj
         return context
 
 
